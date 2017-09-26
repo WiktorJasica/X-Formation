@@ -1,0 +1,15 @@
+1) SQL query nr 1
+
+SELECT xf.country.Name, SUM(xf.city.Population) as Population
+FROM xf.city, xf.country
+WHERE xf.city.CountryID = xf.country.CountryID
+GROUP BY xf.city.CountryID
+HAVING SUM(xf.city.Population)>400
+
+2) SQL query nr 2
+
+SELECT xf.country.Name FROM xf.city
+INNER JOIN xf.country ON xf.country.CountryID = xf.city.CountryID 
+LEFT OUTER JOIN xf.building ON xf.city.CityID = xf.building.CityID
+WHERE xf.building.BuildingID is null
+GROUP BY xf.country.CountryID
