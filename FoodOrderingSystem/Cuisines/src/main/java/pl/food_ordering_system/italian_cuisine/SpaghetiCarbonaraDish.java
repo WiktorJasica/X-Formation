@@ -1,0 +1,33 @@
+package pl.food_ordering_system.italian_cuisine;
+
+import pl.food_ordering_system.domain.ThingsToOrder;
+
+/*
+ * Class that defines object "Spagheti Carbonara Dish"
+ */
+public class SpaghetiCarbonaraDish extends ThingsToOrder {
+	/*
+	 * Fields that contain "name" and "price" of the dish
+	 */
+	private String name;
+	private double price;
+
+	/*
+	 * Constructor - assigning values to the fields
+	 */
+	public SpaghetiCarbonaraDish() {
+		this.name = "Spagheti Carbonara";
+		this.price = 25.00;
+	}
+
+	/*
+	 * Getters
+	 */
+	public String getName() {
+		return name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+}
